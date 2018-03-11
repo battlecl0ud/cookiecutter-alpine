@@ -1,0 +1,11 @@
+{
+  "name": "battlecloud",
+  "email": "battlecloud@khast3x.club",
+  "projectname": "myproject",
+  "giturl": "target project github url",
+  "pythonversion": ["python3", "python2", "none"],
+  "pythonfile": "name of file to execute with python",
+  "requirements": ["y", "n"],
+  "ports": "",
+  "alpinepackages": ""
+}
