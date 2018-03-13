@@ -7,5 +7,6 @@
   "pythonfile": "name of file to execute with python",
   "requirements": ["y", "n"],
   "ports": "",
-  "alpinepackages": ""
+  "alpinepackages": "",
+  "notes": ""
 }
