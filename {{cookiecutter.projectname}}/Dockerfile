@@ -19,7 +19,7 @@ EXPOSE {{cookiecutter.ports}}
 {% endif %}
 # Start tool
 {% if 'python' in cookiecutter.alpineversion %}
-ENTRYPOINT ["python", "{{ cookiecutter.pythonfile }}"]
+ENTRYPOINctfrT ["python", "{{ cookiecutter.pythonfile }}"]
 {% else %}
 ENTRYPOINT ["{{ cookiecutter.pythonfile }}"]
 {% endif %}
