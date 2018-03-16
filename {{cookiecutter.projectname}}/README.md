@@ -4,11 +4,11 @@
 
 
 | Information                	| Auto-generated information 	|
-|----------------------------	|----------------------------	|
+|----------------------------	|:----------------------------:	|
 | Creator                    	| {{ cookiecutter.name }}        	|
 | Email                      	| {{ cookiecutter.email }}        	|
 | Project Source             	| {{ cookiecutter.giturl }}        	|
-| Notes                      	| {{ cookiecutter.notes }}        	|
+| Notes                      	| {{ cookiecutter.description }}        	|
 | Ports to map               	| {{ cookiecutter.ports }}        	|
 | Additional alpine packages 	| {{ cookiecutter.alpinepackages }}        	|
 
