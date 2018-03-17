@@ -11,15 +11,12 @@ RUN git clone {{cookiecutter.giturl}} {{cookiecutter.projectname}}
 WORKDIR {{cookiecutter.projectname}}
 # Is a python requirements.txt present
 {% if cookiecutter.requirements == "requirements.txt" %}
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt; chmod +x docker-entrypoint.sh
 {% endif %}
 # Expose ports
 {% if cookiecutter.ports %}
 EXPOSE {{cookiecutter.ports}}
 {% endif %}
 # Start tool
-{% if 'python' in cookiecutter.alpineversion %}
-ENTRYPOINctfrT ["python", "{{ cookiecutter.pythonfile }}"]
-{% else %}
-ENTRYPOINT ["{{ cookiecutter.pythonfile }}"]
-{% endif %}
+VOLUME ["/loot"]
+ENTRYPOINT ["docker-entrypoint.sh"]
