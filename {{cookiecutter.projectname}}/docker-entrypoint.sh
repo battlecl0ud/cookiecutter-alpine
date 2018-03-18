@@ -5,9 +5,9 @@ then
       /bin/sh
 else
       {% if "python" in cookiecutter.alpineversion %}
-      python {{cookiecutter.projectname}} $USER_INPUT
+      python {{cookiecutter.script}} $USER_INPUT
       {% elif "golang" in cookiecutter.alpineversion %}
-      go {{cookiecutter.projectname}} $USER_INPUT
+      go {{cookiecutter.script}} $USER_INPUT
       {% else %}
       /bin/sh $USER_INPUT
       {% endif %}

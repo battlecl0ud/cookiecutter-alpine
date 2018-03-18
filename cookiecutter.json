@@ -4,7 +4,7 @@
   "alpineversion": ["alpine:latest", "python:2-alpine", "python:3-alpine", "golang:alpine"],
   "giturl": "target project github url",
   "projectname": "MyProject",
-  "pythonfile": "myproject.py",
+  "script": "myproject.py",
   "requirements": "requirements.txt",
   "ports": "",
   "alpinepackages": "",
