@@ -1,7 +1,10 @@
-## {{ cookiecutter.projectname }}
-[![Generic badge](https://img.shields.io/badge/source-{{cookiecutter.projectname}}-green.svg)]({{cookiecutter.giturl}})
+## {{ cookiecutter.toolname }}
+[![Generic badge](https://img.shields.io/badge/source-{{cookiecutter.toolname}}-green.svg)]({{cookiecutter.giturl}})  
+:cloud:  
+:cloud: *battlecloud friendly edition*  
+:cloud:
 
-### Auto generated block
+### Auto generated block :monkey_face:
 
 
 | Information                	| Auto-generated information 	|
@@ -13,7 +16,7 @@
 | Ports to map               	| {{ cookiecutter.ports }}        	|
 | Additional alpine packages 	| {{ cookiecutter.alpinepackages }}        	|
 
-### Tweaking
+### Tweaking :wrench:
 
 Generated files might require some tweaking to work. Common tweaks include:
 
@@ -25,10 +28,10 @@ Generated files might require some tweaking to work. Common tweaks include:
 * Tool dependent setup
   - We suggest doing those in the `docker-entrypoint.sh` script
 
-### Port mapping
+### Port mapping :ear:
 In the Portainer interface, make sure you map you desired ports accordingly in `Advanced Options`.
 
-### Loot
+### Loot :moneybag:
 A `/loot` volume is created when the image is run, you can use it like so to keep generated data:  
 
 ```bash
@@ -39,4 +42,4 @@ $ nmap example.com > /loot/nmap_results.txt
 
 
 -------
-*To use this template, please refer to the battlecloud cookiecutter template repository*
+*To use this template, please refer to the battlecloud cookiecutter [template repository](https://github.com/battlecl0ud/cookiecutter-alpine)* :construction_worker:

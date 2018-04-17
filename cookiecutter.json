@@ -1,12 +1,11 @@
 {
-  "name": "battlecloud",
+  "name": "battlecl0ud",
   "email": "battlecloud@khast3x.club",
   "alpineversion": ["alpine:latest", "python:2-alpine", "python:3-alpine", "golang:alpine"],
-  "giturl": "target project github url",
-  "projectname": "MyProject",
-  "script": "myproject.py",
-  "requirements": "requirements.txt",
-  "ports": "",
   "alpinepackages": "",
+  "giturl": "target project github url",
+  "toolname": "battlecloud_tool",
+  "requirements": "-r requirements.txt",
+  "ports": "",
   "description": ""
 }

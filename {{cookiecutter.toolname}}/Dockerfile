@@ -2,16 +2,17 @@ FROM {{ cookiecutter.alpineversion }}
 
 LABEL maintainer={{ cookiecutter.name}}
 LABEL email={{ cookiecutter.email}}
-LABEL image={{ cookiecutter.projectname }}
+LABEL image={{ cookiecutter.toolname }}
 LABEL source={{ cookiecutter.giturl }}
 
 RUN apk add --no-cache git {{cookiecutter.alpinepackages}}
-
-RUN git clone {{cookiecutter.giturl}} {{cookiecutter.projectname}}
-WORKDIR {{cookiecutter.projectname}}
-# Is a python requirements.txt present
-{% if cookiecutter.requirements == "requirements.txt" %}
-RUN pip install -r requirements.txt
+{% if 'python' in cookiecutter.alpineversion %}
+RUN git clone {{cookiecutter.giturl}} {{cookiecutter.toolname}}
+WORKDIR {{cookiecutter.toolname}}
+RUN pip install {{ cookiecutter.requirements }}
+{% elif 'golang' in cookiecutter.alpineversion %}
+RUN go get -u {{ cookiecutter.requirements }}
+WORKDIR /go/bin
 {% endif %}
 # Expose ports
 {% if cookiecutter.ports %}
