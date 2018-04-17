@@ -9,7 +9,7 @@ RUN apk add --update --no-cache git {{cookiecutter.alpinepackages}}
 {% if 'python' in cookiecutter.alpineversion %}
 RUN git clone {{cookiecutter.giturl}} {{cookiecutter.toolname}}
 WORKDIR {{cookiecutter.toolname}}
-RUN pip install {{ cookiecutter.requirements }}
+RUN pip install requests ; pip install {{ cookiecutter.requirements }}
 {% elif 'golang' in cookiecutter.alpineversion %}
 RUN go get -u {{ cookiecutter.requirements }}
 WORKDIR /go/bin
