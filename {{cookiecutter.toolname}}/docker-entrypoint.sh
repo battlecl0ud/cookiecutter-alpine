@@ -13,7 +13,7 @@ then
       {% endif %}
 else
       {% if "python" in cookiecutter.alpineversion %}
-      python {{cookiecutter.toolname}} $USER_INPUT
+      python {{cookiecutter.toolname}}.py $USER_INPUT
       {% elif "golang" in cookiecutter.alpineversion %}
       {{cookiecutter.toolname}} $USER_INPUT
       {% else %}
