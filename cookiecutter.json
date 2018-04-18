@@ -7,5 +7,6 @@
   "toolname": "battlecloud_tool",
   "requirements": "-r requirements.txt",
   "ports": "",
-  "description": ""
+  "description": "",
+  "restart_policy": ["no", "unless-stopped", "on-failure", "always"]
 }
